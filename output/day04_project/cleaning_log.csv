@@ -1,0 +1,15 @@
+﻿处理步骤,处理规则,处理前记录数,处理后记录数,影响记录数
+删除完全重复行,去除全部字段取值完全一致样本,5630,5630,0
+字段Tenure缺失值填充,使用全局中位数填补缺失值,5630,5630,264
+字段WarehouseToHome缺失值填充,使用全局中位数填补缺失值,5630,5630,251
+字段HourSpendOnApp缺失值填充,使用全局中位数填补缺失值,5630,5630,255
+字段OrderAmountHikeFromlastYear缺失值填充,使用全局中位数填补缺失值,5630,5630,265
+字段CouponUsed缺失值填充,使用全局中位数填补缺失值,5630,5630,256
+字段OrderCount缺失值填充,使用全局中位数填补缺失值,5630,5630,258
+字段DaySinceLastOrder缺失值填充,使用全局中位数填补缺失值,5630,5630,307
+PreferredLoginDevice同义词替换,Phone → Mobile Phone,5630,5630,1231
+PreferredPaymentMode同义词替换,COD → Cash on Delivery,5630,5630,365
+PreferredPaymentMode同义词替换,CC → Credit Card,5630,5630,273
+PreferedOrderCat同义词替换,Mobile → Mobile Phone,5630,5630,809
+Churn转为int类型,将标签字段转为整数型,5630,5630,0
+Complain转为int类型,将标签字段转为整数型,5630,5630,0
