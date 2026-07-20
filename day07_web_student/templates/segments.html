@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}生命周期详情页 | 电商用户分析系统{% endblock %}
+
+{% block content %}
+<h1>用户生命周期分段详情</h1>
+<p>数据来源：segment_analysis.csv，展示全生命周期用户规模与流失风险明细</p>
+
+{# 生命周期数据表格 #}
+<h3>各阶段明细数据表</h3>
+<table border="1" cellpadding="6">
+    <tr>
+        <th>生命周期阶段</th>
+        <th>用户数</th>
+        <th>流失人数</th>
+        <th>流失率</th>
+    </tr>
+    {% for row in segment_rows %}
+    <tr>
+        <td>{{ row["生命周期阶段"] }}</td>
+        <td>{{ row["用户数"] }}</td>
+        <td>{{ row["流失人数"] }}</td>
+        <td>{{ row["流失率"] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{# 带数值证据的数据观察 #}
+<div style="margin-top:20px; font-size:18px; color:#222;">
+    <strong>数据观察：</strong>{{ insight }}
+</div>
+{% endblock %}
